@@ -1,0 +1,34 @@
+{
+    "id": "29580901-36d8-4db1-873f-f27489089dab",
+    "name": "GetSystemInfo",
+    "friendlyName": "GetSystemInformation",
+    "description": "Get system information for the build machine",
+    "helpMarkDown": "[More Information]",
+    "category": "Utility",
+    "visibility": [
+        "Build"
+    ],
+    "author": "Baskar Lingam",
+    "version": {
+        "Major": 1,
+        "Minor": 0,
+        "Patch": 6
+    },
+    "demands": [],
+    "minimumAgentVersion": "1.83.0",
+    "groups": [
+        {
+            "name": "advanced",
+            "displayName": "Advanced",
+            "isExpanded": false
+        }
+    ],
+    "instanceNameFormat": "Get System Information",
+    "execution": {
+        "PowerShell": {
+            "target": "$(currentDirectory)\\GetSystemInfo.ps1",
+            "argumentFormat": "",
+            "workingDirectory": "$(currentDirectory)"
+        }
+    }
+}
