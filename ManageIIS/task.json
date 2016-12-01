@@ -1,0 +1,61 @@
+{
+    "id": "7fe28fb2-c323-4494-beb6-b5c5939b09e7",
+    "name": "ManageIIS",
+    "friendlyName": "ManageIIS",
+    "description": "ManageIIS",
+    "helpMarkDown": "ManageIIS",
+    "category": "Utility",
+    "visibility": [
+        "Build"
+    ],
+    "author": "Baskar Lingam",
+    "version": {
+        "Major": 1,
+        "Minor": 0,
+        "Patch": 4
+    },
+    "demands": [],
+    "minimumAgentVersion": "1.83.0",
+    "groups": [
+        {
+            "name": "advanced",
+            "displayName": "Advanced",
+            "isExpanded": false
+        }
+    ],
+    "instanceNameFormat": "ManageIIS",
+    "inputs": [
+    {
+      "name": "PoolName",
+      "type": "string",
+      "label": "Application Pool Name",
+      "required": true,
+      "defaultValue": "AppPoolName"
+    },
+    {
+      "name": "AppPoolAction",
+      "type": "pickList",
+      "label": "App Pool Action (Stop or Start)",
+      "required": true,
+      "defaultValue": "",
+      "helpMarkDown": "Name of the Database",
+      "options": {
+        "Stop": "Stop App Pool",
+        "Start": "Start App Pool"
+      }
+    },
+    {
+      "name": "ResetIIS",
+      "type": "boolean",
+      "label": "Reset IIS",
+      "defaultValue": "false",
+      "required": true,
+      "helpMarkDown": "To reset IIS on a web server"
+    }
+  ],
+    "execution": {
+        "PowerShell3": {
+            "target": "ManageIIS.ps1"
+        }
+    }
+}
